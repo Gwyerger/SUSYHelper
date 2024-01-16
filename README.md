@@ -1,2 +1,2 @@
 # SUSY Toolkit
- Mathematica code aiding research in SUSY 
+Mathematica Package aiding research in N=16 SUSY
