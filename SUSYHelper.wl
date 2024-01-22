@@ -119,7 +119,7 @@ StyleBox[\"N\",\nFontSlant->\"Italic\"]\)] Returns the L and R Matrices for the 
 StyleBox[\"N\",\nFontSlant->\"Italic\"]\)=2,4,8,9,10,12, and 16 Spinning Particle Theories";
 LRMatricesSM10D::usage = "LRMatricesSM10D[] Returns the L and R matrices for the on-shell 10D N=1 Super-Maxwell Multiplet";
 LRMatricesSM4D::usage = "LRMatricesSM4D[] Returns the L and R matrices for the on-shell 4D N=4 Super-Maxwell multiplet";
-GRdN::usage = "GRdN[\!\(\*
+Garden::usage = "GRdN[\!\(\*
 StyleBox[\"Ls\",\nFontSlant->\"Italic\"]\)\!\(\*
 StyleBox[\",\",\nFontSlant->\"Italic\"]\)\!\(\*
 StyleBox[\" \",\nFontSlant->\"Italic\"]\)\!\(\*
@@ -128,7 +128,7 @@ StyleBox[\"Ls\",\nFontSlant->\"Italic\"]\)\!\(\*
 StyleBox[\" \",\nFontSlant->\"Italic\"]\)and \!\(\*
 StyleBox[\"Rs\",\nFontSlant->\"Italic\"]\)\*
 StyleBox[\(\!\(\*
-StyleBox[\" \",\nFontSlant->\"Italic\"]\) \)]satisfy a Garden Algebra and False otherwise."
+StyleBox[\" \",\nFontSlant->\"Italic\"]\) \)]satisfy a Garden Algebra and False otherwise.";
 
 
 Begin["`Private`"];
@@ -987,7 +987,7 @@ LRMatricesSP[nn_] := (L2SP = {I*\[Sigma]2, -\[Sigma]0}; R2SP = Table[Transpose[L
    If[nn == 9, Return[{L9SP, R9SP}]]; If[nn == 10, Return[{L10SP, R10SP}]]; If[nn == 12, Return[{L12SP, R12SP}]])
 
 
-GRdN[Ls_, Rs_] := (bool = Table[Ls[[i]] . Rs[[j]] + Ls[[j]] . Rs[[i]], {i, 1, Dimensions[Ls][[1]]}, 
+Garden[Ls_, Rs_] := (bool = Table[Ls[[i]] . Rs[[j]] + Ls[[j]] . Rs[[i]], {i, 1, Dimensions[Ls][[1]]}, 
       {j, 1, Dimensions[Ls][[1]]}] == Table[2*IdentityMatrix[Dimensions[Ls][[2]]]*IdentityMatrix[Dimensions[Ls][[1]]][[i,
         j]], {i, 1, Dimensions[Ls][[1]]}, {j, 1, Dimensions[Ls][[1]]}]; Return[bool])
 
