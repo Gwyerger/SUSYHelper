@@ -3,7 +3,7 @@
 BeginPackage["SUSYHelper`"]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Definitions*)
 
 
@@ -1459,7 +1459,7 @@ AllSubGraphsRandom[Hs_, n_] := (Connected = {}; NotConnected = {};
 AllSubAlgebras[\[CapitalGamma]s_, n_] := (Valid = {}; InValid = {}; 
    Connected = {}; RHS = Table[2*IdentityMatrix[Dimensions[\[CapitalGamma]s][[2]]]*
       IdentityMatrix[Dimensions[\[CapitalGamma]s][[1]]][[i,j]], 
-     {i, 1, Length[Ls]}, {j, 1, Length[Ls]}]; 
+     {i, 1, Length[\[CapitalGamma]s]}, {j, 1, Length[\[CapitalGamma]s]}]; 
    Combinations = Subsets[Table[h, {h, 1, Length[\[CapitalGamma]s]}], {n}]; 
    For[hh = 1, hh < Length[Combinations] + 1, hh++, 
     \[CapitalGamma]sN = Table[\[CapitalGamma]s[[Combinations[[hh,hhh]]]], {hhh, 1, n}]; 
@@ -1474,7 +1474,7 @@ AllSubAlgebras[\[CapitalGamma]s_, n_] := (Valid = {}; InValid = {};
 AllNonSubAlgebrasNoPrint[\[CapitalGamma]s_, n_] := (Valid = {}; InValid = {}; 
    Connected = {}; RHS = Table[2*IdentityMatrix[Dimensions[\[CapitalGamma]s][[2]]]*
       IdentityMatrix[Dimensions[\[CapitalGamma]s][[1]]][[i,j]], 
-     {i, 1, Length[Ls]}, {j, 1, Length[Ls]}]; 
+     {i, 1, Length[\[CapitalGamma]s]}, {j, 1, Length[\[CapitalGamma]s]}]; 
    Combinations = Subsets[Table[h, {h, 1, Length[\[CapitalGamma]s]}], {n}]; 
    For[hh = 1, hh < Length[Combinations] + 1, hh++, 
     \[CapitalGamma]sN = Table[\[CapitalGamma]s[[Combinations[[hh,hhh]]]], {hhh, 1, n}]; 
@@ -1484,7 +1484,7 @@ AllNonSubAlgebrasNoPrint[\[CapitalGamma]s_, n_] := (Valid = {}; InValid = {};
 AllSubAlgebrasNoPrint[\[CapitalGamma]s_, n_] := (Valid = {}; InValid = {}; 
    Connected = {}; RHS = Table[2*IdentityMatrix[Dimensions[\[CapitalGamma]s][[2]]]*
       IdentityMatrix[Dimensions[\[CapitalGamma]s][[1]]][[i,j]], 
-     {i, 1, Length[Ls]}, {j, 1, Length[Ls]}]; 
+     {i, 1, Length[\[CapitalGamma]s]}, {j, 1, Length[\[CapitalGamma]s]}]; 
    Combinations = Subsets[Table[h, {h, 1, Length[\[CapitalGamma]s]}], {n}]; 
    For[hh = 1, hh < Length[Combinations] + 1, hh++, 
     \[CapitalGamma]sN = Table[\[CapitalGamma]s[[Combinations[[hh,hhh]]]], {hhh, 1, n}]; 
@@ -1520,17 +1520,10 @@ Involutions[n_Integer, "Cycles"] :=
 
 
 (* ::Section::Closed:: *)
-(*(End of Private Context)*)
-
-
-End[]
-
-
-(* ::Section::Closed:: *)
 (*Dashed Tube Resource Definition*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Preliminaries*)
 
 
@@ -1889,7 +1882,14 @@ tube
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
+(*(End of Private Context)*)
+
+
+End[]
+
+
+(* ::Section::Closed:: *)
 (*(End of Package)*)
 
 
